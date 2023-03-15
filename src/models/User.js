@@ -1,22 +1,22 @@
 const mongoose = require("mongoose");
 
-const videoSchema = new mongoose.Schema({
+const userSchema = new mongoose.Schema({
     _id: {
         type: String,
         required: true,
     },
-    title: {
+    name: {
         type: String,
         required: true,
     },
-    link: {
+    email: {
         type: String,
         required: true,
     },
-    liked: {
+    passworld: {
         type: Boolean,
         default: false,
     },
 });
 
-module.exports = mongoose.model("Video", videoSchema);
+module.exports = mongoose.model("User", userSchema);
